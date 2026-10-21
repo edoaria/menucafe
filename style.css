@@ -1,0 +1,116 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f5f0;
+  color: #30251e;
+}
+
+.header {
+  padding: 28px 16px;
+  text-align: center;
+  background: #563923;
+  color: white;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: auto;
+  padding: 20px 16px;
+}
+
+#search {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d8cec4;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 20px;
+  background: #e7ddd2;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.active {
+  background: #563923;
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.menu-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eee5dc;
+}
+
+.menu-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-info {
+  padding: 12px;
+}
+
+.menu-info h2 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.price {
+  font-weight: bold;
+  color: #704a2d;
+}
+
+.status {
+  font-size: 13px;
+  color: #287448;
+}
+
+.status.habis {
+  color: #b42318;
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
